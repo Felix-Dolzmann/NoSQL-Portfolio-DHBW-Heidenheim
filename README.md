@@ -12,7 +12,7 @@ Dieses Projekt wurde im Rahmen der Vorlesung "Neue Datenbankkonzepte" an der Dua
 # Installation
 Entpacken Sie die erhaltene Datei. 
 
-Um den Server einzurichten, öffnen Sie das entpackte Verzeichnis und führen Sie den folgenden Befehl im Terminal aus: /servernpm install
+Um den Server einzurichten, öffnen Sie die entpackte Datei und führen Sie den folgenden Befehl im Terminal aus: /servernpm install
 
 Um den Server zu starten, führen Sie folgenden Befehl im Terminal aus: npm start
 
