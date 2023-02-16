@@ -1,7 +1,7 @@
 # NoSQL-Portfolio-DHBW-Heidenheim
 Dieses Projekt wurde im Rahmen der Vorlesung "Neue Datenbankkonzepte" an der Dualen Hochschule Baden-Württemberg erstellt.
 
-Anforderungen
+# Anforderungen
 - Node.js v12 oder höher
 - MongoDB v6.0 oder höher
 
@@ -9,14 +9,14 @@ Anforderungen
 
 
 
-Projekt einrichten/starten
+# Installation
 Entpacken Sie die erhaltene Datei. 
 
 Um den Server einzurichten, öffnen Sie das entpackte Verzeichnis und führen Sie den folgenden Befehl im Terminal aus: /servernpm install
 
 Um den Server zu starten, führen Sie folgenden Befehl im Terminal aus: npm start
 
-Der Server sollte nun unter http://localhost:?/ im Browser zu finden sein. 
+Der Server sollte nun unter http://localhost:3000/ im Browser zu finden sein. 
 
 
 
