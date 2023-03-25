@@ -1,0 +1,11 @@
+<div class="main-content" *ngFor="let post of posts">
+  <a [routerLink]="['/postDetails', post.id]" routerLinkActive="active">
+  <div class="card text-white bg-dark mb-3">
+    <div class="card-header">PostTitle {{post.title}}</div>
+    <div class="card-body">
+      <!-- <h5 class="card-title">Dark card title</h5> -->
+      <p class="card-text">{{post.content}}</p>
+    </div>
+  </div>
+</a>
+</div>

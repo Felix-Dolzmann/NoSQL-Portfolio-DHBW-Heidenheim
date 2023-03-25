@@ -7,10 +7,14 @@ export class Post {
     id: ObjectID;
 
     @Column()
-    firstName: string;
+    title: string;
+
+    @Column({default: 1})
+    upvotes = 1;
 
     @Column()
-    lastName: string;
+    description: string;
+
     //eslint-disable-next-line
     @Column((type) => Comment)
     comments: Comment[];

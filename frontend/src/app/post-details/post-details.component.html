@@ -1,0 +1,34 @@
+<div class="main-content">
+  <div class="card text-white bg-dark mb-3">
+    <div class="card-header">PostTitle {{post.title}}</div>
+    <div class="card-body">
+      <!-- <h5 class="card-title">Dark card title</h5> -->
+      <p class="card-text">{{post.content}}</p>
+    </div>
+  </div>
+  <h2 class="lead">Comments:</h2>
+  <ng-container
+    *ngFor="let comment of comments"
+    [ngTemplateOutlet]="treeNode"
+    [ngTemplateOutletContext]="{ $implicit: comment }">
+  </ng-container>
+</div>
+
+<ng-template #treeNode let-comment>
+  <div class="card text-white bg-dark mb-3">
+    <div class="card-header">CommentAuthor {{comment.author}}</div>
+    <div class="card-body">
+      <h5 class="card-title">Dark card title</h5>
+      <p class="card-text">{{comment.content}}</p>
+    </div>
+  </div>
+  <ng-container *ngIf="comment.comments">
+    <ul>
+      <ng-container
+        *ngFor="let comment of comment.comments"
+        [ngTemplateOutlet]="treeNode"
+        [ngTemplateOutletContext]="{ $implicit: comment }">
+      </ng-container>
+    </ul>
+  </ng-container>
+</ng-template>
