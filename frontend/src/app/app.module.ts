@@ -8,6 +8,8 @@ import { StartseiteComponent } from './startseite/startseite.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { NewCommentComponent } from './new-comment/new-comment.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -22,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

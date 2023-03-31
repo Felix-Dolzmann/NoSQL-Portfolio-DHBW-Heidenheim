@@ -13,7 +13,7 @@ export class Post {
     upvotes = 1;
 
     @Column()
-    description: string;
+    content: string;
 
     //eslint-disable-next-line
     @Column((type) => Comment)

@@ -1,24 +1,30 @@
 <div class="main-content">
   <div class="card text-white bg-dark mb-3">
-    <div class="card-header">PostTitle {{post.title}}</div>
+    <div class="card-header">{{post.title}}</div>
     <div class="card-body">
       <!-- <h5 class="card-title">Dark card title</h5> -->
       <p class="card-text">{{post.content}}</p>
     </div>
   </div>
+  <a [routerLink]="['/newComment', post.id]">Neuer Kommentar</a>
+  <br><br>
   <h2 class="lead">Comments:</h2>
-  <ng-container
-    *ngFor="let comment of comments"
-    [ngTemplateOutlet]="treeNode"
-    [ngTemplateOutletContext]="{ $implicit: comment }">
-  </ng-container>
+  <div *ngIf="post.comments && post.comments.length > 0">
+    <ng-container
+      *ngFor="let comment of post.comments"
+      [ngTemplateOutlet]="treeNode"
+      [ngTemplateOutletContext]="{ $implicit: comment }">
+    </ng-container>
+  </div>
+  <div *ngIf="post.comments || post.comments.length > 0">
+    <p class="lead">No comments yet.</p>
+  </div>
 </div>
 
 <ng-template #treeNode let-comment>
   <div class="card text-white bg-dark mb-3">
-    <div class="card-header">CommentAuthor {{comment.author}}</div>
+    <div class="card-header">{{comment.author}}</div>
     <div class="card-body">
-      <h5 class="card-title">Dark card title</h5>
       <p class="card-text">{{comment.content}}</p>
     </div>
   </div>

@@ -17,6 +17,7 @@ export class StartseiteComponent implements OnInit {
 
   getAllPosts() {
     this.backend.getAllPosts().subscribe((data: any) => {
+      console.log(data);
       this.posts = data;
     });
   }
